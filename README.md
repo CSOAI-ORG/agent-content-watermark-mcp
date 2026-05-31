@@ -1,97 +1,78 @@
 # Agent Content Watermark MCP
 
-> ## 🧱 Part of the MEOK Governance Substrate (£499/mo)
-> See [meok.ai/article-50-kit](https://meok.ai/article-50-kit).
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/agent_content_watermark_mcp/)
 
-# EU AI Act Article 50(2) GenAI watermarking — dedicated MCP
+> Agent Content Watermark MCP - dedicated EU AI Act Article 50(2) GenAI watermarking with C2PA mani...
 
-<!-- mcp-name: io.github.CSOAI-ORG/agent-content-watermark-mcp -->
+Agent Content Watermark MCP - dedicated EU AI Act Article 50(2) GenAI watermarking with C2PA manifest envelope. MIT. By MEOK AI Labs.
 
-[![PyPI](https://img.shields.io/pypi/v/agent-content-watermark-mcp)](https://pypi.org/project/agent-content-watermark-mcp/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+---
 
-## What this does
+## 🚀 Quick Start
 
-Article 50(2) of the EU AI Act ([Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)) requires providers of GenAI systems to mark outputs in a **machine-readable format detectable as artificially generated**.
+```bash
+# Install via pip
+pip install agent_content_watermark_mcp
 
-Effective: **2 November 2026** (post-Omnibus delay).
+# Or install via Smithery
+npx -y @smithery/cli@latest install agent-content-watermark-mcp --client claude
+```
 
-This MCP handles the watermark side dedicatedly — distinct from the broader C2PA provenance work in `watermarking-authenticity-mcp`. It produces three layers per the GPAI Code of Practice:
+## ✨ Features
 
-1. **Visible label** — human-readable disclosure (`AI-generated · <provider> · model <id>`)
-2. **Invisible payload** — modality-specific stego (F5 LSB for image, zero-width for text, spread-spectrum for audio, etc.)
-3. **Perceptual anchor** — survives compression / crop / mild edits
+- AI content watermarking
+- Article 50 compliance
+- Detection & verification
+- Batch processing
+- API integration
 
-## Tools
+## 📖 Documentation
 
-| Tool | Purpose |
-|---|---|
-| `generate_watermark(content_hash, model_id, provider_did, modality)` | Emit signed mark |
-| `verify_watermark(mark)` | Cryptographic + perceptual verification |
-| `attach_c2pa_manifest(image_metadata, mark)` | Build C2PA envelope |
-| `list_modalities()` | 5 supported: image · text · audio · video · code |
-| `code_of_practice_status()` | Current GPAI CoP version + days until 2 Nov 2026 |
-| `sign_conformity_attestation(generation_event)` | Article-50 attestation for audit |
+- [Full Documentation](https://docs.meok.ai/agent-content-watermark-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-## Why this exists
+## 🛡️ Compliance
 
-Watermarking is one of the few Article 50 obligations that has *no native tooling* in most agent stacks. Providers building on Claude / GPT / Gemini are responsible — those models don't ship watermarks by default.
+This MCP server is built with **EU AI Act compliance** built-in:
 
-Missing-watermark on a generated output triggers Article 73 reporting via [`agent-incident-relay-mcp`](https://github.com/CSOAI-ORG/agent-incident-relay-mcp).
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-## Sister MCPs
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-- `watermarking-authenticity-mcp` — broader C2PA + Article 50 + Article 73 dispatch
-- `eu-ai-act-compliance-mcp` — Article 50 text + thresholds
-- `agent-incident-relay-mcp` — missing-watermark incident broadcaster
-- `mcp-spec-compliance-mcp` — ensure your own MCP server.json passes audit
+## 🏢 Enterprise
 
-Full catalogue: [meok.ai/anthropic-registry](https://meok.ai/anthropic-registry)
+Need custom development, SLA guarantees, or white-label deployment?
 
-## Pricing
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-| Option | Price |
-|---|---|
-| Self-host MIT | £0 |
-| Universal PAYG | £29/mo + £0.0002/call |
-| Governance Substrate | £499/mo |
-| A2A Substrate | £999/mo |
-| Defence | £4,990/mo |
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-Buy: https://meok.ai/governance
+## 🤝 Part of the MEOK Ecosystem
 
-## Wire it up — full stack
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
-This MCP is part of the MEOK chain that turns one agent action into a fully
-signed compliance event. See
-[meok.ai/mcp-stack](https://meok.ai/mcp-stack) for the 6-MCP chain:
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-1. **bft-progress-council-mcp** — anti-loop guardrail
-2. **agent-token-budget-mcp** — hard spend cap
-3. **agent-content-watermark-mcp** — EU AI Act Article 50(2) watermark
-4. **meok-eu-aigc-icon-mcp** — EU Code-of-Practice icon (Nov 2026 cliff)
-5. **agent-audit-logger-mcp** — hash-chained audit trail
-6. **a2a-governance-bridge-mcp** — fold all signatures into one signed event
+## 📜 License
 
-Output: ONE auditor-defensible evidence event mapped to EU AI Act Articles
-12 + 50, DORA Article 17, ISO 42001 clause 9 — plus a public verify URL.
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-## Licence
+---
 
-MIT. By [MEOK AI Labs](https://meok.ai) (CSOAI LTD, UK Companies House 16939677).
-
-<!-- BUY-LADDER:START -->
-
-## 💸 Try MEOK in 30 seconds — instant buy ladder
-
-| Tier | Price | What you get | Stripe |
-|---|---|---|---|
-| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
-| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
-| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
-
-> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
-> Verify any signed report at <https://meok.ai/verify>.
-
-<!-- BUY-LADDER:END -->
-
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
