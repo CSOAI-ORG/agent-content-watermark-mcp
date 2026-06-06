@@ -12,7 +12,7 @@ EU AI Act Article 50(2): "Providers of GenAI systems... shall ensure that the
 outputs are marked in a machine-readable format and detectable as artificially
 generated or manipulated."
 
-Effective: **2 November 2026** (post-Omnibus delay).
+Effective: **2 August 2026** (NOT delayed by the Digital Omnibus).
 
 This MCP handles the watermark side specifically — distinct from broader C2PA
 provenance. Three layers per the Code of Practice:
@@ -56,7 +56,7 @@ _HMAC_SECRET = os.environ.get("MEOK_HMAC_SECRET", "")
 
 CODE_OF_PRACTICE = {
     "version": "GPAI CoP v1.0",
-    "effective_date": "2026-11-02",
+    "effective_date": "2026-08-02",
     "issuing_body": "European AI Office",
     "scope": "Providers of general-purpose AI models / GenAI systems",
     "key_obligations": [

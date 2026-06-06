@@ -1,33 +1,22 @@
-# Agent Content Watermark MCP
+# agent-content-watermark-mcp
 
-> Agent Content Watermark MCP - dedicated EU AI Act Article 50(2) GenAI watermarking with C2PA mani...
+> Agent Content Watermark MCP — dedicated EU AI Act Article 50(2) GenAI watermarking. Visible + invisible + perceptual layers per the Code of Practice (2 Nov 2026 cliff). C2PA manifest envelope. By MEOK AI Labs.
 
-`agent-content-watermark-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- generate_watermark
+- verify_watermark
+- attach_c2pa_manifest
+- list_modalities
+- code_of_practice_status
+- sign_conformity_attestation
 
 ## Install
-
-```bash
+```
 pip install agent-content-watermark-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx agent-content-watermark-mcp
-```
-
-## Tools
-
-- `generate_watermark`
-- `verify_watermark`
-- `attach_c2pa_manifest`
-- `list_modalities` — Return the supported content modalities and watermarking methods.
-- `code_of_practice_status` — Return current GPAI Code of Practice version + Article 50 effective date.
-- `sign_conformity_attestation`
-
 ## Links
-
-- Source: https://github.com/CSOAI-ORG/agent-content-watermark-mcp
 - PyPI: https://pypi.org/project/agent-content-watermark-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+- Docs: https://meok.ai
