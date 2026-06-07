@@ -1,0 +1,24 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "agent-content-watermark-mcp",
+    "description": "Agent Content Watermark MCP \u2014 dedicated EU AI Act Article 50(2) GenAI watermarking. Visible +",
+    "version": "1.1.3",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "agent-content-watermark-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_watermark",
+      "verify_watermark",
+      "attach_c2pa_manifest",
+      "list_modalities",
+      "code_of_practice_status",
+      "sign_conformity_attestation"
+    ]
+  }
+}
