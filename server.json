@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.CSOAI-ORG/agent-content-watermark-mcp",
-  "version": "1.1.0",
-  "description": "Agent Content Watermark MCP \u2014 dedicated EU AI Act Article 50(2) GenAI watermarking. Visible +",
+  "version": "1.1.5",
+  "description": "Agent Content Watermark MCP — dedicated EU AI Act Article 50(2) GenAI watermarking. Visible +",
   "repository": {
     "url": "https://github.com/CSOAI-ORG/agent-content-watermark-mcp",
     "source": "github"
@@ -11,7 +11,7 @@
     {
       "registryType": "pypi",
       "identifier": "agent-content-watermark-mcp",
-      "version": "1.1.0",
+      "version": "1.1.5",
       "runtimeHint": "python",
       "transport": {
         "type": "stdio"
