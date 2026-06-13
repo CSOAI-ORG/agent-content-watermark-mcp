@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agent-content-watermark-mcp"
-version = "1.1.5"
+version = "1.1.6"
 description = "Agent Content Watermark MCP — dedicated EU AI Act Article 50(2) GenAI watermarking. Visible + invisible + perceptual layers per the Code of Practice (2 Nov 2026 cliff). C2PA manifest envelope. By MEOK AI Labs."
 readme = "README.md"
 license = { text = "MIT" }

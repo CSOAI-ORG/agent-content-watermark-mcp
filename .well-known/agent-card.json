@@ -1,0 +1,134 @@
+{
+  "name": "Agent Content Watermark Mcp",
+  "version": "1.1.3",
+  "url": "https://mcp.meok.ai/agent-content-watermark-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Agent Content Watermark MCP — dedicated EU AI Act Article 50(2) GenAI watermarking. Visible + invisible + perceptual layers per the Code of Practice (2 Nov 2026 cliff). C2PA manifest envelope. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "generate_watermark",
+      "name": "Generate Watermark",
+      "description": "Generate Watermark — a tool of the agent-content-watermark-mcp MCP.",
+      "tags": [
+        "watermark",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "verify_watermark",
+      "name": "Verify Watermark",
+      "description": "Verify Watermark — a tool of the agent-content-watermark-mcp MCP.",
+      "tags": [
+        "watermark",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "attach_c2pa_manifest",
+      "name": "Attach C2Pa Manifest",
+      "description": "Attach C2Pa Manifest — a tool of the agent-content-watermark-mcp MCP.",
+      "tags": [
+        "watermark",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "list_modalities",
+      "name": "List Modalities",
+      "description": "List Modalities — a tool of the agent-content-watermark-mcp MCP.",
+      "tags": [
+        "watermark",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "code_of_practice_status",
+      "name": "Code Of Practice Status",
+      "description": "Code Of Practice Status — a tool of the agent-content-watermark-mcp MCP.",
+      "tags": [
+        "watermark",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "sign_conformity_attestation",
+      "name": "Sign Conformity Attestation",
+      "description": "Sign Conformity Attestation — a tool of the agent-content-watermark-mcp MCP.",
+      "tags": [
+        "watermark",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "agent-content-watermark-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
