@@ -1,6 +1,6 @@
 # agent-content-watermark-mcp
 
-> Agent Content Watermark MCP — dedicated EU AI Act Article 50(2) GenAI watermarking. Visible + invisible + perceptual layers per the Code of Practice (2 Nov 2026 cliff). C2PA manifest envelope. By MEOK AI Labs.
+> Agent Content Watermark MCP — dedicated EU AI Act Article 50(2) GenAI watermarking. Visible + invisible + perceptual layers per the Code of Practice (Article 50 applies from 2 August 2026; systems placed on the market before that date have until 2 December 2026 to comply with Article 50(2)). C2PA manifest envelope. By MEOK AI Labs.
 
 MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
 
