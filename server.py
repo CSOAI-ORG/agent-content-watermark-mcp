@@ -12,7 +12,7 @@ EU AI Act Article 50(2): "Providers of GenAI systems... shall ensure that the
 outputs are marked in a machine-readable format and detectable as artificially
 generated or manipulated."
 
-Effective: **2 August 2026** (NOT delayed by the Digital Omnibus).
+Effective: Article 50 applies from 2 August 2026; systems placed on the market before that date have until 2 December 2026 to comply with Article 50(2) (Regulation (EU) 2026/1744).
 
 This MCP handles the watermark side specifically — distinct from broader C2PA
 provenance. Three layers per the Code of Practice:
@@ -36,7 +36,7 @@ TOOLS
 
 PRICING
 -------
-Free MIT self-host · £29/mo Starter · £79/mo Pro · Governance Substrate £499/mo.
+No subscriptions and no tiers: pay per delivered job. See https://meok.ai/pricing. Source is MIT, free to self-host.
 """
 
 from __future__ import annotations
@@ -317,10 +317,10 @@ if __name__ == "__main__":
     main()
 
 
-# ── MEOK monetization layer (Stripe upgrade · PAYG · pricing) ──────────
-# Free tier is zero-config. Upgrade to Pro (unlimited) or pay-as-you-go per call.
+# ── MEOK pricing pointer (pay per delivered job; no subscriptions) ──────────
+# No tiers. Jobs are quoted individually at https://meok.ai/pricing.
 import os as _meok_os
-MEOK_STRIPE_UPGRADE = "https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t"  # Pro (unlimited)
+MEOK_STRIPE_UPGRADE = "https://meok.ai/pricing"  # no subscription: pay per delivered job
 MEOK_PAYG_KEY = _meok_os.environ.get("MEOK_PAYG_KEY", "")  # set to enable PAYG (x402 / ~GBP0.05 per call)
 MEOK_PRICING = "https://meok.ai/pricing"
 
